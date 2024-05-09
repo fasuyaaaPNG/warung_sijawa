@@ -3,47 +3,49 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-@font-face { 
-    font-family: 'chiaras font'; 
-    src: url('font/ChiarasFont-Regular.otf') format('opentype'); 
-}
-
 .assetAtasBawah {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     left: -0vw;
     overflow: hidden;
     top: -0vh;
-    height: 100vh;
+    height: 100%;
     z-index: -9;
 }
 
 .baso {
-    width: 51vw;
+    width: 48vw;
     position: relative;
     left: 50vw;
-    bottom: 20vh;
+    bottom: 40vw;
 }
 
 .sosis {
-    width: 47vw;
+    width: 49vw;
     position: relative;
-    bottom: 5vh;
-    left: 13vw;
+    bottom: 8vw;
+    left: 14vw;
 }
 
 .esbiru {
-    width: 45vw;
+    width: 49vw;
     position: relative;
-    bottom: 9vh;
     right: 0vw;
+    bottom: 19vw;
+}
+
+.esmerah {
+    width: 47vw;
+    position: relative;
+    top: 12vw;
+    left: 17vw;
 }
 
 .assetBawahKiri {
     width: 22vw;
     position: relative;
-    top: 58.2vh;
-    right: 67vw;
+    top: 114vw;
+    right: 65vw;
 }
 
 .assetAtasKanan {
@@ -51,6 +53,12 @@ body {
     position: relative;
     left: 49vw;
     top: -5vh;
+}
+
+.textJudulDecor {
+    width: 50vw;
+    position: relative;
+    margin-top: 9vh;
 }
 
 .identitas {
@@ -78,7 +86,7 @@ body {
 .judul {
     display: flex;
     align-items: start;
-    width: 55vw;
+    width: 90vw;
     position: relative;
     left: 5vw;
     top: 2vh;
@@ -87,24 +95,22 @@ body {
 .assetJudulDecor {
     width: 7vw;
     position: relative;
-    right: 7vw;
+    right: 18vw;
     top: 1vh;
 }
 
 .textJudulDecor {
-    font-family: chiaras font;
-    color: #5481C5;
-    font-size: 15vw;
-    width: 40vw;
+    width: 47vw;
     position: relative;
     bottom: 5vh;
+    margin-bottom: 5vh;
 }
 
 .makanan {
     position: relative;
     left: 10vw;
     width: 55vw;
-    bottom: 10vh;
+    bottom: 11vw;
 }
 
 .makananRincian1, .makananRincian3 {
@@ -122,10 +128,9 @@ body {
 }
 
 .makananJudul {
-    font-family: chiaras font;
-    color: #5481C5;
-    font-size: 7vw;
-    height: 0vh;
+    width: 28vw;
+    position: relative;
+    top: 4vh;
     margin-bottom: 2vh;
 }
 
@@ -142,6 +147,91 @@ body {
 .makananRincian2 {
     height: 0vh;
     margin-bottom: 2vh;
+    margin-top: 4vw;
+    font-size: 2.5vw;
+}
+
+.minuman {
+    position: relative;
+    left: 40vw;
+    width: 55vw;
+    top: 1vw;
+}
+
+.minumanRincian1, .minumanRincian3 {
+    display: flex;
+    align-items: end;
+}
+
+.judulminumanRincian1,.judulminumanRincian3,.penghubung ,.hargaminumanRincian1,.hargaminumanRincian3 {
+    height: 0vh;
+}
+
+.penghubung {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.minumanJudul {
+    width: 28vw;
+    position: relative;
+    top: 4vh;
+    margin-bottom: 2vh;
+}
+
+.minumanRincian1, .minumanRincian3, .minumanRincian2 {
+    color: #091F5B;
+    font-family: "Poppins", sans-serif;
+}
+
+.minumanRincian1, .minumanRincian3 {
+    font-weight: 700;
+    font-size: 5vw;
+}
+
+.minumanRincian2 {
+    height: 0vh;
+    margin-bottom: 2vh;
     margin-top: 3vh;
     font-size: 2.5vw;
+    width: 17vw;
+}
+
+.menuPesan {
+    background-color: #D0E4FF;
+    border-radius: 2vw;
+    display: flex;
+    width: 40vw;
+    margin: auto;
+    height: 11vw;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0vw 0.6vh 1vw #b8d0f0;
+    position: relative;
+    top: 10vw;
+    right: 18vw;
+}
+
+.isiMenuPesan {
+    align-items: center;
+    display: flex;
+    padding-left: 5vw;
+}
+
+.logoMenu {
+    width: 4vw;
+    margin-right: 2vw;
+}
+
+.a:hover, .b:hover {
+    box-shadow: none;
+    position: relative;
+    top: 11vw;
+}
+
+.deskripsiMenu {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #5481C5;
+    font-size: 3vw;
 }
