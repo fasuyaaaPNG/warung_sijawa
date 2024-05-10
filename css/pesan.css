@@ -1,0 +1,171 @@
+body {
+    background-color: #EDF0F5;
+    font-family: "Poppins", sans-serif;
+}
+
+.judulPesanan {
+    width: 40vw;
+    margin-top: 5vw;
+    margin-left: 5vw;
+}
+
+.infoForm {
+    color: #091F5B;
+    font-size: 5vw;
+    font-weight: 700;
+    margin-left: 5vw;
+    margin-top: 8vw;
+}
+
+.namaTelepon {
+    margin-left: 5vw;
+    border: none;
+    outline: none;
+    width: 50vw;
+    margin-bottom: 6vw;
+    height: 9vw;
+    border-radius: 2vw;
+    background-color: #EDF0F5;
+    box-shadow: 0.1vw 0.1vw 1vw #00000036;
+    padding-left: 4vw;
+    font-size: 3vw;
+}
+
+.namaTelepon::placeholder {
+    opacity: 0.5;
+}
+
+.alamat {
+    width: 70vw;
+    margin-bottom: 2vw;
+}
+
+.pesananForm {
+    color: #091F5B;
+    font-size: 5vw;
+    font-weight: 700;
+    margin-left: 5vw;
+    margin-top: 8vw;
+}
+
+.isiPesanan {
+    display: flex;
+    /* border: 1px solid gold; */
+    justify-content: space-between;
+    align-items: start;
+    width: 85vw;
+    margin: auto;
+    margin-bottom: 3.5vw;
+}
+
+.isiPesananKeterangan {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    gap: 1vw;
+    width: 50vw;
+}
+
+.isiPesananKeteranganJudul {
+    color: #1E1E1E;
+    font-weight: 700;
+    font-size: 4.5vw;
+    height: 0vw;
+}
+
+.isiPesananKeteranganDeskripsi {
+    color: #1E1E1E;
+    font-weight: 500;
+    font-size: 2.5vw;
+    margin-bottom: 1.5vw;
+}
+
+.isiPesananHarga {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5vw;
+    align-items: center;
+}
+
+.isiPesananHargaPesanan {
+    height: 0vw;
+    font-size: 4vw;
+    font-weight: 600;
+}
+
+.isiPesananHargaTombol {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #EDF0F5;
+    border-radius: 1vw;
+    height: 6vw;
+    box-shadow: 0vw 0.4vw 0.9vw #00000036;
+    overflow: hidden;
+    width: 20vw;
+}
+
+.isiPesananHargaTombolKurang, .isiPesananHargaTombolTambah {
+    color: #5481C5;
+} 
+
+.isiPesananHargaTombolKurang {
+    border-right: 0.1vw solid #d7d7d76e;
+    padding-right: 2vw;
+    padding-left: 1.5vw ;
+    font-size: 5vw;
+}
+
+.isiPesananHargaTombolTambah {
+    border-left: 0.1vw solid #d7d7d76e;
+    padding-left: 2vw;
+}
+
+.isiPesananHargaTombolIsi {
+    font-size: 3.5vw;
+}
+
+.majitoCheckbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 1vw;
+}
+
+.majito {
+    opacity: 0.5;
+}
+
+.bintang {
+    color: #DE3030;
+}
+
+.mojitoText {
+    font-size: 2.5vw;
+    opacity: 0.8 ;
+    margin-right: 2vw;
+}
+
+.submit {
+    display: block;
+    margin: auto;
+    margin-top: 10vw;
+    background-color: #2B4487;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    width: 50vw;
+    height: 11vw;
+    border-radius: 2vw;
+    font-size: 3vw;
+    margin-bottom: 3vw;
+}
+
+.info {
+    font-size: 2.5vw;
+    margin: auto;
+    display: block;
+    width: 50vw;
+    text-align: center;
+    margin-bottom: 7vw;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pesan.css">
+    <title>
+        Pesan
+    </title>
+</head>
+<body>
+    <img src="asset/pesanan.png" alt="" class="judulPesanan">
+    <form action="https://script.google.com/macros/s/AKfycbwiZj3PThCNK-tVyNIORZg7yfnHKhZuGCBot61lPnirRT8j_TbMnX8APFz6bktirLBGPA/exec" method="post">
+        <p class="infoForm">
+            Info pelanggan
+        </p>
+        <input placeholder="Nama" name="Nama" type="text" class="namaTelepon">
+        <input placeholder="No. Telepon" name="No_Telp" type="number" class="namaTelepon">
+        <input placeholder="Alamat" name="Alamat" type="text" class="namaTelepon alamat">
+        <p class="pesananForm">
+            Pesanan Anda
+        </p>
+        <div class="isiPesanan">
+            <div class="isiPesananKeterangan">
+                <p class="isiPesananKeteranganJudul">
+                    Baso aci
+                </p>
+                <p class="isiPesananKeteranganDeskripsi">
+                    Baso aci 12 biji, cuanki lidah, siomay kering, pilus sukro, bumbu bubuk, cabai bubuk
+                </p>
+            </div>
+            <div class="isiPesananHarga">
+                <p class="isiPesananHargaPesanan">
+                    Rp. 8.000
+                </p>
+                <div class="isiPesananHargaTombol">
+                    <p onclick="minusButtonBaso()" class="isiPesananHargaTombolKurang">
+                        -
+                    </p>
+                    <input type="hidden" id="inputNilaiBaso" name="Baso_aci">
+                    <p id="isiPesananHargaTombolValueBaso" class="isiPesananHargaTombolIsi">
+                        0
+                    </p>
+                    <p onclick="plusButtonBaso()" id="plusButton" class="isiPesananHargaTombolTambah">
+                        +
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="isiPesanan">
+            <div class="isiPesananKeterangan">
+                <p class="isiPesananKeteranganJudul">
+                    Sosis solo
+                </p>
+                <p class="isiPesananKeteranganDeskripsi">
+                    Sosis solo isi 3 dengan isian daging ayam
+                </p>
+            </div>
+            <div class="isiPesananHarga">
+                <p class="isiPesananHargaPesanan">
+                    Rp. 2.500
+                </p>
+                <div class="isiPesananHargaTombol">
+                    <p onclick="minusButtonSosis()" class="isiPesananHargaTombolKurang">
+                        -
+                    </p>
+                    <input type="hidden" id="inputNilaiSosis" name="Sosis_solo">
+                    <p id="isiPesananHargaTombolValueSosis" class="isiPesananHargaTombolIsi">
+                        0
+                    </p>
+                    <p onclick="plusButtonSosis()" id="plusButton" class="isiPesananHargaTombolTambah">
+                        +
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="isiPesanan">
+            <div class="isiPesananKeterangan">
+                <p class="isiPesananKeteranganJudul">
+                    Mojito
+                </p>
+                <p class="isiPesananKeteranganDeskripsi">
+                    Pilih varian <span class="bintang">*</span>
+                </p>
+                <div class="majitoCheckbox">
+                    <input id="majito1" class="majito" type="checkbox" onclick="handleCheckboxClick('majito1')">
+                    <label for="majito1" class="mojitoText">
+                        Blue ocean
+                    </label>
+                    <input id="majito2" class="majito" type="checkbox" onclick="handleCheckboxClick('majito2')">
+                    <label for="majito2" class="mojitoText">
+                        Pink summer
+                    </label>
+                </div>
+            </div>
+            <div class="isiPesananHarga">
+                <p class="isiPesananHargaPesanan">
+                    Rp. 6.000
+                </p>
+                <div class="isiPesananHargaTombol">
+                    <p onclick="minusButtonMojito()" class="isiPesananHargaTombolKurang">
+                        -
+                    </p>
+                    <p id="isiPesananHargaTombolValueMojito" class="isiPesananHargaTombolIsi">
+                        0
+                    </p>
+                    <p onclick="plusButtonMojito()" id="plusButton" class="isiPesananHargaTombolTambah">
+                        +
+                    </p>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="inputNilaiMojito" name="Mojito">
+        <div class="isiPesanan">
+            <div class="isiPesananKeterangan">
+                <p class="isiPesananKeteranganJudul">
+                    Sodalicious
+                </p>
+                <p class="isiPesananKeteranganDeskripsi">
+                    Minuman soda dengan campuran susu putih yang manis
+                </p>
+            </div>
+            <div class="isiPesananHarga">
+                <p class="isiPesananHargaPesanan">
+                    Rp. 5.000
+                </p>
+                <div class="isiPesananHargaTombol">
+                    <p onclick="minusButtonSoda()" class="isiPesananHargaTombolKurang">
+                        -
+                    </p>
+                    <input type="hidden" id="inputNilaiSoda" name="Sodalicious">
+                    <p id="isiPesananHargaTombolValueSoda" class="isiPesananHargaTombolIsi">
+                        0
+                    </p>
+                    <p onclick="plusButtonSoda()" id="plusButton" class="isiPesananHargaTombolTambah">
+                        +
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="submit">
+            Pesan sekarang
+        </button>
+        <p class="info">
+            <span class="bintang">*</span> Pembayaran dilakukan melalui COD
+        </p>
+    </form>
+</body>
+<script src="script/pesanan.js"></script>
+</html>
