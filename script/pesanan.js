@@ -6,33 +6,29 @@ let jumlahSodalicious = 0;
 
 function plusButtonBaso() {
     jumlahBasoAci++;
-    let nilaiBaso = document.getElementById("isiPesananHargaTombolValueBaso").innerText;
-    document.getElementById("inputNilaiBaso").value = nilaiBaso;
+    document.getElementById("inputNilaiBaso").value = jumlahBasoAci;
     document.getElementById("isiPesananHargaTombolValueBaso").innerText = jumlahBasoAci;
 }
 
 function minusButtonBaso() {
     if (jumlahBasoAci > 0) {
         jumlahBasoAci--;
-        let nilaiBaso = document.getElementById("isiPesananHargaTombolValueBaso").innerText;
-        document.getElementById("inputNilaiBaso").value = nilaiBaso;
-        document.getElementById("isiPesananHargaTombolValueBaso").innerText = jumlahBasoAci;   
+        document.getElementById("isiPesananHargaTombolValueBaso").innerText = jumlahBasoAci;
+        document.getElementById("inputNilaiBaso").value = jumlahBasoAci;
     }
 }
 
 function plusButtonSosis() {
     jumlahSosisSolo++;
-    let nilaiSosis = document.getElementById("isiPesananHargaTombolValueSosis").innerText;
-    document.getElementById("inputNilaiSosis").value = nilaiSosis;
+    document.getElementById("inputNilaiSosis").value = jumlahSosisSolo;
     document.getElementById("isiPesananHargaTombolValueSosis").innerText = jumlahSosisSolo;
 }
 
 function minusButtonSosis() {
     if (jumlahSosisSolo > 0) {
         jumlahSosisSolo--;
-        let nilaiSosis = document.getElementById("isiPesananHargaTombolValueSosis").innerText;
-        document.getElementById("inputNilaiSosis").value = nilaiSosis;
         document.getElementById("isiPesananHargaTombolValueSosis").innerText = jumlahSosisSolo;
+        document.getElementById("inputNilaiSosis").value = jumlahSosisSolo;
     }
 }
 
@@ -52,31 +48,44 @@ function minusButtonMojito() {
 
 function plusButtonSoda() {
     jumlahSodalicious++;
-    let nilaiSoda = document.getElementById("isiPesananHargaTombolValueSoda").innerText;
-    document.getElementById("inputNilaiSoda").value = nilaiSoda;
+    document.getElementById("inputNilaiSoda").value = jumlahSodalicious;
     document.getElementById("isiPesananHargaTombolValueSoda").innerText = jumlahSodalicious;
 }
 
 function minusButtonSoda() {
     if (jumlahSodalicious > 0) {
         jumlahSodalicious--;
-        let nilaiSoda = document.getElementById("isiPesananHargaTombolValueSoda").innerText;
-        document.getElementById("inputNilaiSoda").value = nilaiSoda;
         document.getElementById("isiPesananHargaTombolValueSoda").innerText = jumlahSodalicious;
+        document.getElementById("inputNilaiSoda").value = jumlahSodalicious;
     }
 }
 
 function handleCheckboxClick(variantId) {
     const checkbox = document.getElementById(variantId);
+    const checkboxes = document.querySelectorAll('.majito');
+    checkboxes.forEach((box) => {
+        if (box.id !== variantId) {
+            box.checked = false;
+        }
+    });
     if (checkbox.checked) {
         selectedMojitoVariants.push(checkbox.nextElementSibling.textContent.trim());
     } else {
         selectedMojitoVariants = selectedMojitoVariants.filter(variant => variant !== checkbox.nextElementSibling.textContent.trim());
     }
     updateMojitoInput();
-}
+} 
 
 function updateMojitoInput() {
     const inputValue = jumlahMojito + (selectedMojitoVariants.length > 0 ? ' ' + selectedMojitoVariants.join(', ') : '');
     document.getElementById("inputNilaiMojito").value = inputValue;
 }
+
+function redirect() {
+    setTimeout(function() {
+        alert("Pesanan terkirim, silahkan tunggu pesan Whatsapp dari kami :)");
+        window.location.href = "index.html"; 
+    }, 1);
+}
+
+window.addEventListener("DOMContentLoaded", function() { const formPemesanan = document.getElementById('pemesanan'); formPemesanan.addEventListener("submit", function(e) { e.preventDefault(); const data = new FormData(formPemesanan); const action = e.target.action; fetch(action, { method: 'POST', body: data, }) .then(() => { window.location.replace('https://warung-sijawa.vercel.app/') }) }) }); 

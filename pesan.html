@@ -10,13 +10,13 @@
 </head>
 <body>
     <img src="asset/pesanan.png" alt="" class="judulPesanan">
-    <form action="https://script.google.com/macros/s/AKfycbwiZj3PThCNK-tVyNIORZg7yfnHKhZuGCBot61lPnirRT8j_TbMnX8APFz6bktirLBGPA/exec" method="post">
+    <form id="pemesanan" action="https://script.google.com/macros/s/AKfycbyyjNo2RlqeM7k5jBtR7-wc_s0jj1lVBseBwkVNwlsg4-OvIhoacqDNC4EOtWT_7YEWkA/exec" method="post">
         <p class="infoForm">
             Info pelanggan
         </p>
-        <input placeholder="Nama" name="Nama" type="text" class="namaTelepon">
-        <input placeholder="No. Telepon" name="No_Telp" type="number" class="namaTelepon">
-        <input placeholder="Alamat" name="Alamat" type="text" class="namaTelepon alamat">
+        <input placeholder="Nama" name="Nama" type="text" class="namaTelepon" required>
+        <input placeholder="No. Telepon" name="No_Telp" type="number" class="namaTelepon" required>
+        <input placeholder="Alamat" name="Alamat" type="text" class="namaTelepon alamat" required>
         <p class="pesananForm">
             Pesanan Anda
         </p>
@@ -138,7 +138,7 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="submit">
+        <button onsubmit="redirect()" type="submit" class="submit">
             Pesan sekarang
         </button>
         <p class="info">
