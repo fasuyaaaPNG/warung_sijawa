@@ -85,7 +85,7 @@ function redirect() {
     setTimeout(function() {
         alert("Pesanan terkirim, silahkan tunggu pesan Whatsapp dari kami :)");
         window.location.href = "index.html"; 
-    }, 1);
+    }, 1000);
 }
 
 window.addEventListener("DOMContentLoaded", function() { const formPemesanan = document.getElementById('pemesanan'); formPemesanan.addEventListener("submit", function(e) { e.preventDefault(); const data = new FormData(formPemesanan); const action = e.target.action; fetch(action, { method: 'POST', body: data, }) .then(() => { window.location.replace('https://warung-sijawa.vercel.app/') }) }) }); 
