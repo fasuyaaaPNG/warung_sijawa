@@ -33,12 +33,38 @@ function minusButtonSosis() {
 }
 
 function plusButtonMojito() {
+    const checkboxes = document.querySelectorAll('.majito');
+    let varianTerpilih = false;
+    checkboxes.forEach((box) => {
+        if (box.checked) {
+            varianTerpilih = true;
+        }
+    });
+    
+    if (!varianTerpilih) {
+        alert("Pilih varian mojito terlebih dahulu.");
+        return;
+    }
+
     jumlahMojito++;
     document.getElementById("isiPesananHargaTombolValueMojito").innerText = jumlahMojito;
     updateMojitoInput();
 }
 
 function minusButtonMojito() {
+    const checkboxes = document.querySelectorAll('.majito');
+    let varianTerpilih = false;
+    checkboxes.forEach((box) => {
+        if (box.checked) {
+            varianTerpilih = true;
+        }
+    });
+    
+    if (!varianTerpilih) {
+        alert("Pilih varian mojito terlebih dahulu.");
+        return;
+    }
+
     if (jumlahMojito > 0) {
         jumlahMojito--;
         document.getElementById("isiPesananHargaTombolValueMojito").innerText = jumlahMojito;
